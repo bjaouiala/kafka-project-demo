@@ -18,7 +18,7 @@ public class MessageController {
     private final KafkaJsonConsumer kafkaJsonConsumer;
     @PostMapping
     public ResponseEntity<String> sendMessage(@RequestBody String message){
-        kafkaProducer.sendMessage(message);
+        kafkaProducer.sendMessage();
         return ResponseEntity.ok("message sent succefully");
     }
     @PostMapping("/json")
